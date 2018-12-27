@@ -1,0 +1,24 @@
+%PROOF<kan_extension_as_end>
+
+ここでは最初の式のみを示す。
+2 つ目の式も同様に証明できる。
+
+任意の関手 $ H \colon \mathscr{D} \to \mathscr{E} $ に対し、
+$$
+\begin{align*}
+  \mathop{\mathrm{Nat}} \left( \int ^{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, \text{-}) \odot GC, H \right)
+  & \cong \int _{D \in \mathscr{D}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} \left( \int ^{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, D) \odot GC, HD \right) \\
+  & \cong \int _{D \in \mathscr{D}} \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (\mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, D) \odot GC, HD) \\
+  & \cong \int _{C \in \mathscr{C}} \int _{D \in \mathscr{D}} \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} (\mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, D), \mathop{\mathrm{Hom}}\nolimits _{\mathscr{E}} (GC, HD)) \\
+  & \cong \int _{D \in \mathscr{D}} \mathop{\mathrm{Nat}} (\mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, \text{-}), \mathop{\mathrm{Hom}}\nolimits _{\mathscr{E}} (GC, H \text{-})) \\
+  & \cong \int _{D \in \mathscr{D}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{E}} (GC, HFC) \\
+  & \cong \int _{D \in \mathscr{D}} \mathop{\mathrm{Nat}} (G, H \circ F)
+\end{align*}
+$$
+が成り立つ。
+ここで 1 行目では、[定理]<natural_transformation_as_end>を用いて自然変換全体を[エンド]<end>で表した。
+2 行目では、[命題]<end_hom>を用いて[コエンド]<coend>を外に出し、続く 3 行目では、[定理]<fubini>を用いて[エンド]<end>の順序を交換し、[テンソル対象]<tensor>の定義を用いてエンドの中の式を変形した。
+さらに 4 行目では、[定理]<natural_transformation_as_end>を用いて[エンド]<end>を自然変換全体の集合で表した。
+5 行目では、[定理]<yoneda>を用いて式変形し、最後に 6 行目では、再び[定理]<natural_transformation_as_end>を用いた。
+
+最初と最後の式を比べると、これは定理中の[コエンド]<coend>が[左 Kan 拡張]<left_kan_extension>の満たすべき普遍性を満たしていることを意味している。

@@ -1,0 +1,11 @@
+%THM
+
+関手 $ F \colon \mathscr{C} \to \mathscr{D} $, $ G \colon \mathscr{C} \to \mathscr{E} $ をとる。
+$ F $ に沿った $ G $ の[左 Kan 拡張]<left_kan_extension>と[右 Kan 拡張]<right_kan_extension>は、それぞれ以下の式中の[テンソル対象]<tensor>もしくは[余テンソル対象]<cotensor>が存在するならば、$ \mathscr{D} $ の各対象 $ D' $ に対し、
+$$
+\begin{align}
+  (\mathop{\mathrm{Lan}}\nolimits _F G) D' & \cong \int ^{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, D') \odot GC \\
+  (\mathop{\mathrm{Ran}}\nolimits _F G) D' & \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (D', FC) \pitchfork GC
+\end{align}
+$$
+と書ける。

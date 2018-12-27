@@ -1,0 +1,21 @@
+%PROOF<yoneda>
+
+ここでは最初の式のみを示す。
+残りの式も同様に証明できる。
+
+任意の集合 $ X $ に対し、
+$$
+\begin{align*}
+  \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} \left( \int ^{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', C) \times FC, X \right)
+  & \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} (\mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', C) \times FC, X) \\
+  & \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} (\mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', C), \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} (KC, X)) \\
+  & \cong \mathop{\mathrm{Nat}} (\mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', \text{-}), \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} (K \text{-}, X)) \\
+  & \cong \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} (KC', X))
+\end{align*}
+$$
+が成り立つ。
+ここで 1 行目では、[命題]<end_hom>を用いて[コエンド]<coend>を外に出し、2 行目では、積の性質を用いてエンドの中の式を変形した。
+3 行目では、[定理]<natural_transformation_as_end>を用いて[エンド]<end>を自然変換全体の集合で表した。
+最後に 4 行目では、通常の Yoneda の補題を用いた。
+
+最初と最後の式を比べれば、再び Yoneda の補題を用いることで、定理の式が従う。

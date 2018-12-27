@@ -1,0 +1,19 @@
+%THM: Yoneda の補題
+
+関手 $ F \colon \mathscr{C} ^\circ \to \mathbf{Set} $ に対し、以下の式中の積や冪が存在するならば、
+$$
+\begin{align*}
+  FC' & \cong \int ^{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', C) \times FC \\
+  & \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C, C') \mathbin{\rightharpoonup} FC
+\end{align*}
+$$
+が成り立つ。
+また同様に、関手 $ G \colon \mathscr{C} \to \mathbf{Set} $ に対し、以下の式中の積や冪が存在するならば、
+$$
+\begin{align*}
+  GC' & \cong \int ^{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C, C') \times GC \\
+  & \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', C) \mathbin{\rightharpoonup} GC
+\end{align*}
+$$
+が成り立つ。
+なお、積と冪をそれぞれ $ \times $ と $ \rightharpoonup $ で表した。

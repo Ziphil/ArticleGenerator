@@ -1,0 +1,10 @@
+%DEF?: 余テンソル対象
+[]<natural_transformation_as_end>
+[]<tensor>
+
+圏 $ \mathscr{C} $ の対象 $ C $ と集合 $ X $ をとる。
+任意の $ \mathscr{C} $ の対象 $ C' $ に対して、全単射
+$$
+\mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', X \pitchfork C) \cong \mathop{\mathrm{Hom}}\nolimits _{\mathbf{Set}} (X, \mathop{\mathrm{Hom}}\nolimits _{\mathscr{C}} (C', C))
+$$
+が $ C' $ に関して自然に成り立つような $ \mathscr{C} $ の対象 $ X \pitchfork C $ を、$ X $ と $ C $ の**余テンソル対象**という。

@@ -1,0 +1,252 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        "tex2jax": {
+          "inlineMath": [['$', '$']],
+          "processEscapes": true
+        },
+        "HTML-CSS": {
+          "availableFonts": ["STIX"],
+          "preferredFont": "STIX",
+          "webFont": "STIX-Web",
+        },
+        "TeX": {
+          "extensions": ["xypic.js", "AMSmath.js", "AMSsymbols.js"]
+        }
+      });
+    </script>
+    <script async="async" src="#{@option[:mathjax_directory]}/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="#{@option[:vis_directory]}/vis.js"></script>
+    <script src="#{@option[:jquery_path]}"></script>
+    <script>
+      function showPopup(source, number) {
+        let popup = $("#popup-" + number).clone();
+        popup.css("display", "block");
+        source.off("click");
+        source.removeAttr("onclick");
+        source.on("click", (event) => {
+          popup.remove();
+          source.off("click");
+          source.on("click", (innerEvent) => {
+            showPopup(source, number);
+          });
+        });
+        source.after(popup);
+      }
+      function toggleProof(source, number) {
+        let proof = source.next();
+        proof.toggle();
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="#{@option[:vis_directory]}/vis.css">
+    <style type="text/css">
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: "Times New Roman", "IPA明朝", serif;
+        font-size: 16px;
+        background-color: hsl(0, 0%, 90%);
+      }
+      div.content {
+        width: 800px;
+        margin: 0px auto;
+        padding: 80px 50px;
+        background-color: white;
+        border-left: 1px hsl(0, 0%, 40%) solid;
+        border-right: 1px hsl(0, 0%, 40%) solid;
+      }
+      div.content div#network {
+        height: 400px;
+        margin: 20px 0px;
+        border: 1px hsl(0, 0%, 30%) solid;
+      }
+      div.content div.box {
+        margin: 20px 0px;
+        padding: 0px 15px;
+        font-size: 16px;
+      }
+      div.content div.box-def {
+        border: 1px hsl(240, 80%, 30%) solid;
+      }
+      div.content div.box-prop {
+        border: 1px hsl(30, 80%, 30%) solid;
+      }
+      div.content div.box-thm {
+        border: 1px hsl(0, 80%, 30%) solid;
+      }
+      div.content div.text {
+        margin: 20px 0px;
+        padding: 0px 15px;
+        border-left: 1px hsl(0, 0%, 30%) dotted;
+        border-right: 1px hsl(0, 0%, 30%) dotted;
+      }
+      div.content div.box::before {
+        margin: 0px -15px;
+        padding: 5px 0px 5px 15px;
+        font-family: "Arial", "IPAゴシック", serif;
+        font-weight: bold;
+        color: white;
+        display: block;
+        content: attr(before-content);
+      }
+      div.content div.box-def::before {
+        background-color: hsl(240, 80%, 30%);
+      }
+      div.content div.box-prop::before {
+        background-color: hsl(30, 80%, 30%);
+      }
+      div.content div.box-thm::before {
+        background-color: hsl(0, 80%, 30%);
+      }
+      div.content div.text::before {
+        margin: 0px -5px;
+        padding: 0px 10px 0px 0px;
+        font-family: "Arial", "IPAゴシック", serif;
+        font-weight: bold;
+        font-size: 80%;
+        color: hsl(0, 0%, 30%);
+        content: attr(before-content) ":";
+      }
+      div.content div.box div.name,
+      div.content div.text div.name {
+        font-size: 70%;
+        color: hsla(0, 0%, 0%, 50%);
+      }
+      div.content div.proof {
+        margin: 0px 0px;
+        padding: 0px 0px;
+        font-size: 16px;
+        border-top: 1px hsl(0, 0%, 30%) dotted;
+      }
+      div.content div.proof a.before {
+        margin: 2px 0px 8px 0px;
+        padding: 0px;
+        font-family: "Arial", "IPAゴシック", serif;
+        font-weight: bold;
+        font-size: 80%;
+        color: hsl(0, 0%, 30%);
+        border: none;
+        display: block;
+      }
+      div.content div.proof div.proof-content {
+        display: none;
+      }
+      div.content div.popup {
+        margin: 10px 5px;
+        padding: 0px 15px;
+        background-color: hsl(60, 90%, 98%);
+        border: 1px hsl(60, 50%, 30%) solid;
+        display: none;
+      }
+      div.content span.popup-number {
+        font-size: 70%;
+        color: hsla(240, 80%, 60%, 50%);
+        vertical-align: baseline;
+        position: relative;
+        top: -0.5em;
+      }
+      div.content p {
+        margin: 8px 0px;
+        padding: 0px;
+        line-height: 150%;
+        text-align: justify;
+      }
+      div.content strong {
+        font-family: "Arial", "IPAゴシック", serif;
+        font-weight: bold;
+      }
+      div.content a {
+        color: hsl(240, 80%, 60%);
+        border-bottom: 1px hsl(240, 80%, 60%) dotted;
+      }
+      div.content ul,
+      div.content ol {
+        margin: 8px 0px 10px 30px;
+        padding: 0px;
+      }
+      div.content ul li,
+      div.content ol li {
+        margin: 0px;
+        padding: 0px;
+        line-height: 150%;
+        text-align: justify;
+      }
+      div.content div.MathJax_Display {
+        margin: 10px 0px !important;
+      }
+    </style>
+    <title>Output</title>
+  </head>
+  <body>
+    <div class="content">
+      <div id="network"></div>
+      #{content}
+      <script>
+        let nodes = new vis.DataSet([
+          #{node_script}  
+        ]);
+        let edges = new vis.DataSet([
+          #{edge_script}
+        ]);
+        let container = document.getElementById("network");
+        let data = {nodes: nodes, edges: edges};
+        let options = {
+          width: "100%",
+          height: "100%",
+          autoResize: false,
+          nodes: {
+            font: {
+              face: "Arial",
+              color: "white",
+              size: 24
+            },
+            margin: {
+              top: 5,
+              bottom: 5,
+              left: 10,
+              right: 10
+            },
+            shape: "box",
+            borderWidth: 0,
+            labelHighlightBold: false
+          },
+          edges: {
+            color: {
+              color: $("#network").css("border-color"),
+              highlight: $("#network").css("border-color"),
+              hover: $("#network").css("border-color")
+            },
+            arrows: {to: true}
+          },
+          interaction: {
+            selectable: true,
+            selectConnectedEdges: false,
+            hover: false,
+            hoverConnectedEdges: false
+          },
+          layout: {
+            hierarchical: {
+              enabled: true,
+              direction: "LR",
+              levelSeparation: 300,
+              nodeSpacing: 5,
+              treeSpacing: 100,
+              sortMethod: "directed"
+            }
+          }
+        };
+        let network = new vis.Network(container, data, options);
+        network.on("doubleClick", (event) => {
+          if (event.nodes.length == 1) {
+            let nodeId = event.nodes[0];
+            let node = nodes.get(nodeId);
+            window.location.hash = "#box-" + node.id;
+          }
+        });
+        network.focus(1, {scale: 1});
+      </script>
+    </div>
+  </body>
+</html>

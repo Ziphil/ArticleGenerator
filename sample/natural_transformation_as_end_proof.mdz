@@ -1,0 +1,30 @@
+%PROOF<natural_transformation_as_end>
+
+[楔]<wedge> $ \alpha \colon X \mathrel{\dot{\to}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (F \text{-}, G \text{-}) $ を考える。
+これを 1 つ定めるとは、$ \mathscr{C} $ の対象 $ C $ と $ X $ の元 $ x $ に対する $ \mathscr{D} $ の射 $ \alpha _C x \colon FC \to GC $ の族であって、任意の $ \mathscr{C} $ の射 $ f \colon C \to C' $ に対し、
+$$
+\xymatrix{
+  FC \ar[r] ^{Ff} \ar[d] _{\alpha _C x} & FC' \ar[d] ^{\alpha _{C'} x} \\
+  GC \ar[r] _{Gf} & GC'
+}
+$$
+が可換になるものを決めるということである。
+この可換性は、各 $ x $ を固定したときに、$ \alpha _C x \colon FC \to GC $ たちが自然変換 $ \alpha _{\text{-}} x \colon F \Rightarrow G $ を成すということに他ならない。
+
+このことをふまえると、$ \mathscr{C} $ の対象 $ C $ と $ \mathop{\mathrm{Nat}} (F, G) $ の元 $ \sigma $ に対して $ \beta _C \sigma \mathrel{:=} \sigma _C \colon FC \to GC $ と定めることにより、[楔]<wedge> $ \beta \colon \mathop{\mathrm{Nat}} (F, G) \mathrel{\dot{\to}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (F \text{-}, G \text{-}) $ が得られる。
+さらに任意の[楔]<wedge> $ \alpha \colon X \mathrel{\dot{\to}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (F \text{-}, G \text{-}) $ をとり、
+$$
+\begin{align*}
+h \colon X & \longrightarrow \mathop{\mathrm{Nat}} (F, G) \\
+x & \longmapsto (\alpha _C x) _{C \in \mathscr{C}}
+\end{align*}
+$$
+と定めると、$ \mathscr{C} $ の各対象 $ C $ に対して、
+$$
+\xymatrix{
+  \mathop{\mathrm{Nat}} (F, G) \ar[r] ^{\beta _C} & \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, GC) \\
+  X \ar[ru] _{\alpha _C} \ar[u] ^{h}  &
+}
+$$
+は可換である。
+これはすなわち、$ \beta $ が定理の[エンド]<end>を定める[楔]<wedge>であることを意味している。

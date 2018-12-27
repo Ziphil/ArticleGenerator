@@ -1,0 +1,12 @@
+%DEF?: 双自然変換
+
+関手 $ F, G \colon \mathscr{C} ^\circ \times \mathscr{C} \to \mathscr{D} $ に対し、$ \mathscr{C} $ の各対象 $ C $ に対し、$ \mathscr{D} $ の射 $ \alpha _C \colon F (C, C) \to G (C, C) $ が定まっているとする。
+さらに、任意の $ \mathscr{C} $ の射 $ f \colon C \to C' $ に対し、
+$$
+\xymatrix{
+  F (C', C) \ar[r] ^{F (f, \mathrm{id})} \ar[d] _{F (\mathrm{id}, f)} & F (C, C) \ar[r] ^{\alpha _C} & G (C, C) \ar[d] ^{G (\mathrm{id}, f)} \\
+  F (C', C') \ar[r] _{\alpha _{C'}} & G (C', C') \ar[r] _{G (f, \mathrm{id})} & G (C, C')
+}
+$$
+が可換であるとする。
+このとき、$ \alpha $ を**双自然変換**といい、$ \alpha \colon F \mathrel{\dot{\Rightarrow}} G $ で表す。

@@ -1,0 +1,12 @@
+%PROP
+
+関手 $ F \colon \mathscr{C} ^\circ \times \mathscr{C} \to \mathscr{D} $ をとる。
+任意の $ \mathscr{D} $ の対象 $ D $ に対し、以下の式中の[エンド]<end>や[コエンド]<coend>が存在するならば、
+$$
+\begin{align*}
+  \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} \left( D, \int _{C \in \mathscr{C}} F (C, C) \right) & \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (D, F (C, C)) \\
+  \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} \left( \int ^{C \in \mathscr{C}} F (C, C), D \right) & \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (F (C, C), D) \\
+\end{align*}
+$$
+が成り立つ。
+さらに、この同型はどちらも $ D $ に関して自然である。

@@ -1,0 +1,6 @@
+%DEF?: 余楔
+[]<wedge>
+
+関手 $ F \colon \mathscr{C} ^\circ \times \mathscr{C} \to \mathscr{D} $ をとる。
+$ \mathscr{D} $ のある対象 $ D $ に対して $ \alpha \colon F \mathrel{\dot{\Rightarrow}} \varDelta _D $ の形の[双自然変換]<dinatural_transformation>を、$ D $ における $ F $ の**余楔**といい、$ \alpha \colon F \mathrel{\dot{\rightarrow}} D $ で表す。
+ここで、$ \varDelta _D $ は $ D $ に値をもつ定値関手である。 

@@ -1,0 +1,19 @@
+%DEF: エンド
+
+関手 $ F \colon \mathscr{C} ^\circ \times \mathscr{C} \to \mathscr{D} $ をとる。
+$ F $ の[楔]<wedge> $ \bar{\alpha} \colon \bar{D} \mathrel{\dot{\rightarrow}} F $ が以下の条件を満たすとする。
+
+- 任意の $ F $ の[楔]<wedge> $ \alpha \colon \bar{D} \mathrel{\dot{\rightarrow}} F $ に対し、$ \mathscr{C} $ の射 $ h \colon D \to \bar{D} $ が一意に存在して、任意の $ \mathscr{C} $ の対象 $ C $ について、
+$$
+\xymatrix{
+  \bar{D} \ar[r] ^{\bar{\alpha} _C} & F (C, C) \\
+  D \ar[ru] _{\alpha _C} \ar[u] ^{h}  &
+}
+$$
+は可換である。
+
+このとき、$ \bar{D} $ を $ F $ の**エンド**といい、
+$$
+\bar{D} \mathrel{=:} \int _{C \in \mathscr{C}} F (C, C)
+$$
+で表す。

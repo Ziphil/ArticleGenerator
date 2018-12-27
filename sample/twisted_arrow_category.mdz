@@ -1,0 +1,15 @@
+%DEF?: 捻れた射の圏
+
+圏 $ \mathscr{C} $ に対し、圏 $ \mathbf{Tw} (\mathscr{C}) $ を以下によって定める。
+
+- $ \mathbf{Tw} (\mathscr{C}) $ の対象は、$ \mathscr{C} $ の射とする。
+- $ \mathbf{Tw} (\mathscr{C}) $ の 2 つの対象 $ f \colon C \to C' $, $ g \colon D \to D' $ の間の射は、$ \mathscr{C} $ の射 $ h \colon D \to C $, $ k \colon C' \to D' $ の組であって、
+$$
+\xymatrix{
+  C \ar[d] _f & D \ar[l] _{h} \ar[d] ^ g \\
+  C' \ar[r] _k & D'
+}
+$$
+が可換であるようなものとする。
+
+この圏を $ \mathscr{C} $ の**捻れた射の圏**という。

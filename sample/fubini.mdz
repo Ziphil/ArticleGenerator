@@ -1,0 +1,10 @@
+%THM: Fubini の定理
+
+関手 $ F \colon \mathscr{C} ^\circ \times \mathscr{C} \times \mathscr{B} ^\circ \times \mathscr{B} \to \mathscr{D} $ に対し、以下の式中の左辺と右辺の一方が存在すればもう一方も存在し、
+$$
+\begin{align*}
+  \int _{C \in \mathscr{C}} \int _{B \in \mathscr{B}} F (C, C, B, B) & \cong \int _{B \in \mathscr{B}} \int _{C \in \mathscr{C}}  F (C, C, B, B) \\
+  \int ^{C \in \mathscr{C}} \int ^{B \in \mathscr{B}} F (C, C, B, B) & \cong \int ^{B \in \mathscr{B}} \int ^{C \in \mathscr{C}}  F (C, C, B, B)
+\end{align*}
+$$
+がそれぞれ成り立つ。

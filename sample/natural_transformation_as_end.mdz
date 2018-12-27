@@ -1,0 +1,8 @@
+%THM
+[]<end_hom>
+
+関手 $ F, G \colon \mathscr{C} \to \mathscr{D} $ に対し、
+$$
+\mathop{\mathrm{Nat}} (F, G) \cong \int _{C \in \mathscr{C}} \mathop{\mathrm{Hom}}\nolimits _{\mathscr{D}} (FC, GC)
+$$
+が成り立つ。

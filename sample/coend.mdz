@@ -1,0 +1,20 @@
+%DEF: コエンド
+[]<end>
+
+関手 $ F \colon \mathscr{C} ^\circ \times \mathscr{C} \to \mathscr{D} $ をとる。
+$ F $ の[余楔]<cowedge> $ \bar{\alpha} \colon F \mathrel{\dot{\rightarrow}} \bar{D} $ が以下の条件を満たすとする。
+
+- 任意の $ F $ の[余楔]<cowedge> $ \alpha \colon F \mathrel{\dot{\rightarrow}} \bar{D} $ に対し、$ \mathscr{D} $ の射 $ h \colon \bar{D} \to D $ が一意に存在して、任意の $ \mathscr{C} $ の対象 $ C $ について、
+$$
+\xymatrix{
+  F (C, C) \ar[r] ^{\bar{\alpha} _C} \ar[dr] _{\alpha _C} & \bar{D} \ar[d] ^h \\
+  & D
+}
+$$
+は可換である。
+
+このとき、$ \bar{D} $ を $ F $ の**コエンド**といい、
+$$
+\bar{D} \mathrel{=:} \int ^{C \in \mathscr{C}} F (C, C)
+$$
+で表す。

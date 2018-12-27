@@ -1,0 +1,5 @@
+%DEF?: 楔
+
+関手 $ F \colon \mathscr{C} ^\circ \times \mathscr{C} \to \mathscr{D} $ をとる。
+$ \mathscr{D} $ のある対象 $ D $ に対して $ \alpha \colon \varDelta _D \mathrel{\dot{\Rightarrow}} F $ の形の[双自然変換]<dinatural_transformation>を、$ D $ における $ F $ の**楔**といい、$ \alpha \colon D \mathrel{\dot{\rightarrow}} F $ で表す。
+ここで、$ \varDelta _D $ は $ D $ に値をもつ定値関手である。 

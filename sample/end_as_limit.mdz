@@ -1,0 +1,17 @@
+%PROP
+
+関手 $ F \colon \mathscr{C} ^\circ \times \mathscr{C} \to \mathscr{D} $ をとる。
+関手 $ \tilde{F} $ を、
+$$
+\begin{align*}
+  \tilde{F} \colon\, \mathbf{Tw} (\mathscr{C}) & \longrightarrow \mathscr{D} \\
+  f & \longmapsto F (\mathop{\mathrm{dom}} f, \mathop{\mathrm{cod}} f)
+\end{align*}
+$$
+で定める。
+ここで、$ \mathbf{Tw} (\mathscr{C}) $ は $ \mathscr{C} $ の[捻れた射の圏]<twisted_arrow_category>である。
+このとき、$ F $ の[エンド]<end>が存在することと $ \tilde{F} $ の極限が存在することは同値であり、これらが存在するならば、
+$$
+\int _{C \in \mathscr{C}} F (C, C) \cong \lim _{f \in \mathbf{Tw} (\mathscr{C})} \tilde{F} f
+$$
+が成り立つ。
