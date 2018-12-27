@@ -9,7 +9,7 @@
 ## デモ
 このリポジトリ内に含まれるサンプルデータを HTML に変換したものを公開しています。
 
-- [https://ziphil.github.io/ArticleGeneratorDemo/index.html](デモページ)
+- [デモページ](https://ziphil.github.io/ArticleGeneratorDemo/index.html)
 
 ## 利用方法
 ### ライブラリの準備
