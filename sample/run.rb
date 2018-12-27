@@ -15,5 +15,5 @@ option = {
   :show_name => false,
   :show_popup_number => false
 }
-manager = ZeroFileManager.new(".", "out", option)
+manager = ArticleFileManager.new(".", "out", option)
 manager.convert

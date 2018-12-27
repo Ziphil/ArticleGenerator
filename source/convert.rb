@@ -8,7 +8,7 @@ Encoding.default_external = "UTF-8"
 $stdout.sync = true
 
 
-class ZeroFileManager
+class ArticleFileManager
 
   attr_reader :option
 
@@ -21,7 +21,7 @@ class ZeroFileManager
     @option = option
     Dir.foreach(source_directory) do |path|
       if path != "." && path != ".." && path =~ /\.mdz$/
-        file = ZeroFile.new(source_directory + "/" + path, self)
+        file = ArticleFile.new(source_directory + "/" + path, self)
         @files << file
       end
     end
@@ -134,7 +134,7 @@ class ZeroFileManager
 end
 
 
-class ZeroFile
+class ArticleFile
 
   attr_reader :path
   attr_reader :source

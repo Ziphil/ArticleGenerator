@@ -62,7 +62,7 @@ option = {
   :vis_directory => "vis",
   :jquery_path => "jquery/jquery.js"
 }
-manager = ZeroFileManager.new(source_directory, output_directory, option)
+manager = ArticleFileManager.new(source_directory, output_directory, option)
 manager.convert
 ```
 
